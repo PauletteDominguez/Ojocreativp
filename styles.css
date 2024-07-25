@@ -1,0 +1,688 @@
+/* Reset básico */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://i.pinimg.com/originals/af/c7/ab/afc7ab864f7cf99f9b4399e4a461e279.gif') repeat; /* Imagen de fondo repetida */
+    background-size: 100px 100px; /* Tamaño del patrón */
+    background-position: 100px 100px; /* Espacio entre las imágenes del patrón */
+    font-family: verdana;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background: rgba(0, 0, 0, 0.5); /* Transparente */
+    padding: 10px 20px; /* Reducido para no ocupar mucho espacio */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: none; /* Sin sombra ni borde */
+    border: none; /* Sin bordes */
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 150px;
+    margin-right: 10px;
+}
+
+header .brand-name {
+    font-family: 'Lobster', cursive; /* Aplica la tipografía Lobster */
+    font-size: 120px; /* Ajustado para no ocupar mucho espacio */
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.8); /* Efecto de neón */
+    letter-spacing: -2px; /* Espaciado ajustado */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.colorful-button {
+    background: linear-gradient(45deg, #007bff, #ff69b4, #800080, #ffff00);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-width: 160px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.menu-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-dropdown .dropdown-content li a {
+    padding: 10px 15px;
+    text-align: left;
+    display: block;
+    border-radius: 10px;
+}
+
+.menu-dropdown .dropdown-content li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Main */
+main {
+    padding: 160px 20px 20px; /* Ajustado para evitar solapamiento con el header */
+    width: 80%;
+    text-align: center;
+}
+
+.colorful-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-top: 40px; /* Añadido para separar del header */
+    border: 2px solid transparent;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+    transition: background 0.3s, box-shadow 0.3s;
+    background: linear-gradient(45deg, #007bff, #ff69b4, #800080, #ffff00);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+}
+
+.colorful-box:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 80px 0; /* Espacio para separar de otras secciones */
+    gap: 20px; /* Espacio entre botones */
+}
+
+.buttons a {
+    text-decoration: none;
+}
+
+.circle-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; /* Tamaño del ícono */
+    color: white;
+    transition: box-shadow 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.circle-button i {
+    position: relative;
+    z-index: 1;
+}
+
+.blue {
+    background: #007bff;
+    box-shadow: 0 0 10px 2px #007bff;
+}
+
+.pink {
+    background: #ff69b4;
+    box-shadow: 0 0 10px 2px #ff69b4;
+}
+
+.purple {
+    background: #800080;
+    box-shadow: 0 0 10px 2px #800080;
+}
+
+.yellow {
+    background: #ffff00;
+    box-shadow: 0 0 10px 2px #ffff00;
+}
+
+.circle-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.8);
+}
+
+/* Estilo para los círculos con imágenes */
+.circle-image {
+    width: 200px; /* Tamaño del círculo */
+    height: 200px; /* Tamaño del círculo */
+    border-radius: 50%;
+    background-color: transparent; /* Fondo transparente para permitir que la imagen sea visible */
+    border: 5px solid transparent; /* Borde transparente para el efecto neón */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Necesario para el borde neón */
+    overflow: hidden; /* Asegura que la imagen no sobresalga del círculo */
+}
+
+/* Estilo para el contenedor de círculos */
+.image-circles {
+    display: flex; /* Usa flexbox para la alineación horizontal */
+    justify-content: space-around; /* Espacio uniforme entre los círculos */
+    flex-wrap: wrap; /* Permite que los círculos se envuelvan en múltiples filas si es necesario */
+    gap: 20px; /* Espacio entre los contenedores de círculos */
+}
+
+/* Estilo para el contenedor de cada círculo y su título */
+.circle-container {
+    display: flex;
+    flex-direction: column; /* Apila el círculo y el título verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+/* Estilo para los círculos con imágenes */
+.circle-image {
+    width: 200px; /* Tamaño del círculo */
+    height: 200px; /* Tamaño del círculo */
+    border-radius: 50%;
+    background-color: transparent; /* Fondo transparente para permitir que la imagen sea visible */
+    border: 5px solid transparent; /* Borde transparente para el efecto neón */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Necesario para el borde neón */
+    overflow: hidden; /* Asegura que la imagen no sobresalga del círculo */
+}
+
+/* Estilo para las imágenes dentro de los círculos */
+.circle-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir el círculo */
+}
+
+/* Colores y bordes neón */
+.circle-image.blue {
+    border-color: #007bff; /* Azul */
+}
+
+.circle-image.pink {
+    border-color: #ff69b4; /* Rosa */
+}
+
+.circle-image.purple {
+    border-color: #800080; /* Morado */
+}
+
+.circle-image.yellow {
+    border-color: #ffff00; /* Amarillo */
+}
+
+.circle-image.green {
+    border-color: #00ff00; /* Verde */
+}
+
+/* Efecto neón en el borde */
+.circle-image::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    border: 5px solid;
+    opacity: 0.7;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: -1;
+}
+
+.circle-image.blue::before {
+    border-color: #007bff; /* Azul neón */
+}
+
+.circle-image.pink::before {
+    border-color: #ff69b4; /* Rosa neón */
+}
+
+.circle-image.purple::before {
+    border-color: #800080; /* Morado neón */
+}
+
+.circle-image.yellow::before {
+    border-color: #ffff00; /* Amarillo neón */
+}
+
+.circle-image.green::before {
+    border-color: #00ff00; /* Verde neón */
+}
+
+.circle-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+}
+
+.circle-image:hover::before {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Estilo para los títulos debajo de los círculos */
+.circle-title {
+    font-family: 'Arial', sans-serif; /* Tipografía adecuada para el título */
+    color: white; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    font-size: 14px; /* Tamaño del texto del título */
+    padding: 0 5px; /* Espacio dentro del título */
+}
+
+
+
+/* Footer */
+.neon-footer {
+    background: linear-gradient(45deg, #007bff, #ff69b4, #800080, #ffff00);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px solid transparent;
+    box-shadow: 0 -5px 15px rgba(255, 0, 255, 0.6);
+    transition: box-shadow 0.3s;
+    margin-top: 80px;
+}
+
+.neon-footer:hover {
+    box-shadow: 0 -5px 30px rgba(255, 255, 255, 0.8);
+}
+
+/* Estilo para la introducción de la galería */
+.gallery-intro {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+    background: linear-gradient(45deg, #007bff, #ff69b4, #800080, #ffff00);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+}
+
+.gallery-intro h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.gallery-intro p {
+    font-size: 18px;
+}
+
+/* Estilo para las secciones de la galería */
+.gallery-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Estilo para cada sección dentro de la galería */
+.gallery-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+    background: linear-gradient(45deg, #007bff, #ff69b4, #800080, #ffff00);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    margin-bottom: 40px; /* Separación entre el título y las imágenes */
+}
+
+.gallery-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px; /* Separación entre el título y las imágenes */
+}
+
+/* Estilo para las imágenes dentro de cada sección */
+.gallery-images {
+    display: flex;
+    gap: 10px; /* Espacio reducido entre los círculos */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Las imágenes ya están estilizadas como círculos en el CSS global */
+.circle-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 5px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Estilo para el título de la página Sobre mi */
+.about-me h1 {
+    font-size: 48px;
+    color: #f1c40f; /* Color amarillo neon */
+    text-align: center;
+    margin: 50px 0 30px 0;
+    text-shadow: 0 0 10px #f1c40f, 0 0 20px #f1c40f, 0 0 30px #f1c40f;
+    font-family: 'Lobster', cursive;
+}
+
+/* Estilo para la imagen del autor */
+.author-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.circle-img-neon {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+}
+
+.circle-img-neon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid transparent;
+}
+
+/* Estilo para el texto de la biografía */
+.bio-text {
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 20px 50px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Ajustes adicionales para espacio alrededor del contenido principal */
+.about-me {
+    padding: 50px 20px;
+}
+
+/* Estilo para el título de la página Servicios */
+.services h1 {
+    font-size: 48px;
+    color: #ffffff; /* Color blanco */
+    text-align: center;
+    margin: 50px 0 30px 0;
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4; /* Bordes rosas neon */
+    font-family: 'Lobster', cursive;
+}
+
+/* Estilo para los apartados de servicios */
+.service-item {
+    margin: 30px 0;
+    text-align: center;
+}
+
+/* Subtítulos de servicios con diferentes colores */
+.service-title-1 {
+    color: #1e90ff; /* Color azul */
+}
+
+.service-title-2 {
+    color: #32cd32; /* Color verde lima */
+}
+
+.service-title-3 {
+    color: #ff8c00; /* Color naranja oscuro */
+}
+
+.service-title-4 {
+    color: #ff1493; /* Color rosa profundo */
+}
+
+.service-title-5 {
+    color: #8a2be2; /* Color azul violeta */
+}
+
+.service-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+    font-family: 'Lobster', cursive;
+}
+
+/* Contenido del servicio (imagen + descripción) */
+.service-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+    margin-bottom: 20px;
+}
+
+.service-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid transparent;
+}
+
+.service-content p {
+    font-size: 20px;
+    color: #ffffff;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Ajustes adicionales para espacio alrededor del contenido principal */
+.services {
+    padding: 50px 20px;
+}
+
+/* Estilo para el título de la página Referencias */
+.references h1 {
+    font-size: 48px;
+    color: #ffffff;
+    text-align: center;
+    margin: 50px 0 30px 0;
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4; /* Bordes rosas neon */
+    font-family: 'Lobster', cursive;
+}
+
+/* Contenedor de referencias */
+.reference-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Estilo para cada item de referencia */
+.reference-item {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+}
+
+.reference-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Ajustes adicionales para espacio alrededor del contenido principal */
+.references {
+    padding: 50px 20px;
+}
+
+/* Sección de Anuncios */
+.announcements {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px; /* Separación del header */
+}
+
+.announcements h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: #f1c40f; /* Color amarillo neon */
+    text-shadow: 0 0 10px #f1c40f, 0 0 20px #f1c40f, 0 0 30px #f1c40f;
+    font-family: 'Lobster', cursive;
+}
+
+.announcement-card {
+    display: inline-block;
+    width: 300px; /* Ancho de la tarjeta */
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+    transition: background 0.3s, box-shadow 0.3s;
+    background: linear-gradient(45deg, #007bff, #ff69b4, #800080, #ffff00);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    text-align: left;
+}
+
+.announcement-card:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+.announcement-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.announcement-card h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #ffffff; /* Color blanco */
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4; /* Bordes rosas neon */
+    font-family: 'Lobster', cursive;
+}
+
+.announcement-card p {
+    font-size: 16px;
+    color: #ffffff; /* Color blanco */
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif; /* Cambiar a una fuente no cursiva */
+}
+
+footer a {
+    color: #F7F7F7; /* Color contrastante */
+    text-decoration: none;
+}
+
+/* Ajuste del margen inferior del contenedor principal */
+main {
+    padding: 160px 20px 120px; /* Aumentar el padding-bottom para evitar solapamiento con el footer */
+    width: 80%;
+    text-align: center;
+}
+
+/* Ajuste en la clase extra para el margen inferior */
+.extra {
+    margin-bottom: 120px; /* Aumenta el margen para asegurar espacio suficiente antes del footer */
+}
